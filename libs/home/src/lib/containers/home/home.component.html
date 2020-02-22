@@ -1,4 +1,8 @@
 <mat-toolbar color="primary">
     Angular Forms Showcase
-    <button mat-button>Login</button>
+    <button mat-button [routerLink]="['login-showcase']">Login</button>
 </mat-toolbar>
+
+<div fxLayout="column" class="full-height">
+    <router-outlet></router-outlet>
+</div>
