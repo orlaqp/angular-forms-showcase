@@ -10,5 +10,19 @@
     "tslint.json": "*",
     "nx.json": "*"
   },
-  "projects": {}
+  "projects": {
+    "angular-forms-showcase": {
+      "tags": []
+    },
+    "angular-forms-showcase-e2e": {
+      "tags": [],
+      "implicitDependencies": ["angular-forms-showcase"]
+    },
+    "home": {
+      "tags": []
+    },
+    "material": {
+      "tags": []
+    }
+  }
 }
