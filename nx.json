@@ -23,6 +23,12 @@
     },
     "material": {
       "tags": []
+    },
+    "login-template-driven": {
+      "tags": []
+    },
+    "login-reactive": {
+      "tags": []
     }
   }
 }

@@ -1,8 +1,8 @@
-<div fxLayout="row" fxLayoutGap="20px" fxLayoutAlign="space-around stretch" class="h-100">
-    <div fxFlex>
-        template driven
+<div fxLayout.sm="column" fxLayout.lt-sm="column" fxLayout.gt-sm="row"  fxLayoutGap="20px" fxLayoutAlign="space-around stretch" class="h-100">
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+        <afs-login-template-driven fxFlex="0 1 auto"></afs-login-template-driven>
     </div>
-    <div fxFlex>
-        reactive
+    <div fxFlex fxLayout="column" fxLayoutAlign="center center">
+        <afs-login-reactive fxFlex="0 1 auto"></afs-login-reactive>
     </div>
 </div>

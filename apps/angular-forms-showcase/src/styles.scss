@@ -29,3 +29,8 @@ $angular-forms-showcase-theme: mat-light-theme($angular-forms-showcase-primary, 
 
 html, body { height: 100%; margin: 0; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// helper styles
+.h-100 {
+    height: 100%;
+}

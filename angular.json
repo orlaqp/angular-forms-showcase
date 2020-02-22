@@ -190,6 +190,70 @@
           "styleext": "scss"
         }
       }
+    },
+    "login-template-driven": {
+      "projectType": "library",
+      "root": "libs/login/template-driven",
+      "sourceRoot": "libs/login/template-driven/src",
+      "prefix": "angular-forms-showcase",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/login/template-driven/tsconfig.lib.json",
+              "libs/login/template-driven/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/login/template-driven/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/login/template-driven/jest.config.js",
+            "tsConfig": "libs/login/template-driven/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/login/template-driven/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "login-reactive": {
+      "projectType": "library",
+      "root": "libs/login/reactive",
+      "sourceRoot": "libs/login/reactive/src",
+      "prefix": "angular-forms-showcase",
+      "architect": {
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/login/reactive/tsconfig.lib.json",
+              "libs/login/reactive/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/login/reactive/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "libs/login/reactive/jest.config.js",
+            "tsConfig": "libs/login/reactive/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "libs/login/reactive/src/test-setup.ts"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

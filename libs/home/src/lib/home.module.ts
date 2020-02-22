@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './containers/home/home.component';
 import { MaterialModule } from '@angular-forms-showcase/material';
 import { LoginShowcaseComponent } from './components/login-showcase/login-showcase.component';
+import { LoginTemplateDrivenModule } from '@angular-forms-showcase/login/template-driven';
+import { LoginReactiveModule } from '@angular-forms-showcase/login/reactive';
 
 @NgModule({
   imports: [
@@ -13,7 +15,9 @@ import { LoginShowcaseComponent } from './components/login-showcase/login-showca
       {path: 'home', component: HomeComponent, children: [
           {path: 'login-showcase', component: LoginShowcaseComponent},
       ]},
-    ])
+    ]),
+    LoginTemplateDrivenModule,
+    LoginReactiveModule,
   ],
   declarations: [HomeComponent, LoginShowcaseComponent]
 })

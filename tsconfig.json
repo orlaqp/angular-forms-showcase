@@ -17,7 +17,13 @@
     "baseUrl": ".",
     "paths": {
       "@angular-forms-showcase/home": ["libs/home/src/index.ts"],
-      "@angular-forms-showcase/material": ["libs/material/src/index.ts"]
+      "@angular-forms-showcase/material": ["libs/material/src/index.ts"],
+      "@angular-forms-showcase/login/template-driven": [
+        "libs/login/template-driven/src/index.ts"
+      ],
+      "@angular-forms-showcase/login/reactive": [
+        "libs/login/reactive/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
