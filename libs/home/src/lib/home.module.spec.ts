@@ -2,13 +2,13 @@ import { async, TestBed } from '@angular/core/testing';
 import { HomeModule } from './home.module';
 
 describe('HomeModule', () => {
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      imports: [HomeModule]
-    }).compileComponents();
-  }));
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            imports: [HomeModule]
+        }).compileComponents();
+    }));
 
-  it('should create', () => {
-    expect(HomeModule).toBeDefined();
-  });
+    it('should create', () => {
+        expect(HomeModule).toBeDefined();
+    });
 });

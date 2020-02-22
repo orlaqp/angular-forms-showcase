@@ -1,28 +1,46 @@
 <form (ngSubmit)="onSubmit()" #form="ngForm">
-  <mat-card class="login-card">
-    <mat-card-title>Login</mat-card-title>
-    <mat-card-subtitle>Template Driven Version</mat-card-subtitle>
-    <mat-card-content fxLayout="column">
-      <mat-form-field appearance="outline" fxFlex>
-        <mat-label>Username</mat-label>
-        <input matInput name="username" [(ngModel)]="model.username" required minlength="3"/>
-      </mat-form-field>
+    <mat-card class="login-card">
+        <mat-card-title>Login</mat-card-title>
+        <mat-card-subtitle>Template Driven Version</mat-card-subtitle>
+        <mat-card-content fxLayout="column">
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Username</mat-label>
+                <input
+                    matInput
+                    name="username"
+                    [(ngModel)]="model.username"
+                    required
+                    minlength="3"
+                />
+            </mat-form-field>
 
-      <mat-form-field appearance="outline" fxFlex>
-        <mat-label>Password</mat-label>
-        <input matInput name="password" [(ngModel)]="model.password" required minlength="8"/>
-      </mat-form-field>
-    </mat-card-content>
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Password</mat-label>
+                <input
+                    matInput
+                    name="password"
+                    [(ngModel)]="model.password"
+                    required
+                    minlength="8"
+                />
+            </mat-form-field>
+        </mat-card-content>
 
-    <mat-card-actions>
-      <button type="submit" mat-raised-button color="accent" [disabled]="!form.valid">Login</button>
-      Is Form Valid: {{ form.valid }}
-    </mat-card-actions>
-  </mat-card>
+        <mat-card-actions>
+            <button
+                type="submit"
+                mat-raised-button
+                color="accent"
+                [disabled]="!form.valid"
+            >
+                Login
+            </button>
+            Is Form Valid: {{ form.valid }}
+        </mat-card-actions>
+    </mat-card>
 
-  <pre>
+    <pre>
       Form Data: {{ model | json }}
-  </pre>
-  
+  </pre
+    >
 </form>
-

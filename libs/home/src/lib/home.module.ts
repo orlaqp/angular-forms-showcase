@@ -8,17 +8,24 @@ import { LoginTemplateDrivenModule } from '@angular-forms-showcase/login/templat
 import { LoginReactiveModule } from '@angular-forms-showcase/login/reactive';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MaterialModule,
-    RouterModule.forChild([
-      {path: 'home', component: HomeComponent, children: [
-          {path: 'login-showcase', component: LoginShowcaseComponent},
-      ]},
-    ]),
-    LoginTemplateDrivenModule,
-    LoginReactiveModule,
-  ],
-  declarations: [HomeComponent, LoginShowcaseComponent]
+    imports: [
+        CommonModule,
+        MaterialModule,
+        RouterModule.forChild([
+            {
+                path: 'home',
+                component: HomeComponent,
+                children: [
+                    {
+                        path: 'login-showcase',
+                        component: LoginShowcaseComponent
+                    }
+                ]
+            }
+        ]),
+        LoginTemplateDrivenModule,
+        LoginReactiveModule
+    ],
+    declarations: [HomeComponent, LoginShowcaseComponent]
 })
 export class HomeModule {}

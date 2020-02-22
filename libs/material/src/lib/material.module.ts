@@ -11,16 +11,16 @@ import { MatButtonModule } from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
-  exports: [
-    MatToolbarModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatCheckboxModule,
-    MatIconModule,
-    MatButtonModule,
-    // flex layout
-    FlexLayoutModule
-  ]
+    exports: [
+        MatToolbarModule,
+        MatCardModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatCheckboxModule,
+        MatIconModule,
+        MatButtonModule,
+        // flex layout
+        FlexLayoutModule
+    ]
 })
 export class MaterialModule {}

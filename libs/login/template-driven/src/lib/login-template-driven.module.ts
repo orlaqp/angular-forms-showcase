@@ -5,8 +5,8 @@ import { MaterialModule } from '@angular-forms-showcase/material';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [CommonModule, MaterialModule, FormsModule],
-  exports: [LoginTemplateDrivenComponent],
-  declarations: [LoginTemplateDrivenComponent]
+    imports: [CommonModule, MaterialModule, FormsModule],
+    exports: [LoginTemplateDrivenComponent],
+    declarations: [LoginTemplateDrivenComponent]
 })
 export class LoginTemplateDrivenModule {}
