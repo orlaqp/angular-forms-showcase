@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
     selector: 'afs-login-reactive',
@@ -7,9 +7,13 @@ import { FormGroup } from '@angular/forms';
     styleUrls: ['./login-reactive.component.scss']
 })
 export class LoginReactiveComponent implements OnInit {
-    formGroup: FormGroup;
+    
+    loginForm = this.fb.group({
+        username: ['', [Validators.required, Validators.minLength(3)]],
+        password: ['', [Validators.required, Validators.minLength(8)]]
+    });
 
-    constructor() {}
+    constructor(private fb: FormBuilder) { }
 
     ngOnInit(): void {}
 }
