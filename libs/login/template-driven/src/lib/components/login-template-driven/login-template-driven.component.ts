@@ -6,10 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-template-driven.component.scss']
 })
 export class LoginTemplateDrivenComponent implements OnInit {
+  model = {
+    username: '',
+    password: ''
+  };
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  onSubmit() {}
 }
