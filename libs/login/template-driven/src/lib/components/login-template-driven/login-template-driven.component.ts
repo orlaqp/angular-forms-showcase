@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'afs-login-template-driven',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login-template-driven.component.scss']
 })
 export class LoginTemplateDrivenComponent implements OnInit {
+  @ViewChild('form') form: FormGroup;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    console.log('submitting the form');
+    console.log(this.form.value);
+
   }
 
 }

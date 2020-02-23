@@ -1,23 +1,32 @@
-<mat-card class="login-card">
-    <mat-card-title>Login</mat-card-title>
-    <mat-card-subtitle>Template Driven Version</mat-card-subtitle>
-    <mat-card-content fxLayout="column">
-        
-        <mat-form-field appearance="outline" fxFlex>
-            <mat-label>Username</mat-label>
-            <input matInput>
-        </mat-form-field>
+<form (ngSubmit)="onSubmit()" #form="ngForm">
 
-        <mat-form-field appearance="outline" fxFlex>
-            <mat-label>Password</mat-label>
-            <input matInput>
-        </mat-form-field>
+  <mat-card class="login-card">
+      <mat-card-title>Login</mat-card-title>
+      <mat-card-subtitle>Template Driven Version</mat-card-subtitle>
+      <mat-card-content fxLayout="column">
 
-    </mat-card-content>
+          <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Username</mat-label>
+              <input matInput ngModel name="username" required minlength="3">
+          </mat-form-field>
 
-    <mat-card-actions>
-        <button mat-raised-button color="accent">Login</button>
-    </mat-card-actions>
+          <mat-form-field appearance="outline" fxFlex>
+              <mat-label>Password</mat-label>
+              <input matInput ngModel name="password" required minlength="8">
+          </mat-form-field>
 
-</mat-card>
 
+
+      </mat-card-content>
+
+      <mat-card-actions>
+          <button type="submit" mat-raised-button color="accent" [disabled]="form.invalid">Login</button>
+      </mat-card-actions>
+
+  </mat-card>
+
+  <pre>
+    Form Value: {{ form.value | json }}
+  </pre>
+
+</form>
